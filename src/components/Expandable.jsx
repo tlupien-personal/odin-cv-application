@@ -1,7 +1,7 @@
 import { useState } from "react";
 import IconButton from "./IconButton";
 
-const Expandable = function ({ isLocked, leafType, renderItem }) {
+const Expandable = function ({ isLocked, renderItem }) {
   const [items, setItems] = useState([crypto.randomUUID()]);
 
   const addItem = function () {
@@ -12,7 +12,7 @@ const Expandable = function ({ isLocked, leafType, renderItem }) {
     <div>
       {items.map((item) => (
         <div key={item}>
-          {renderItem(leafType, isLocked)}
+          {renderItem(isLocked)}
           {!isLocked && (
             <IconButton
               iconName="delete"

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { SectionContext } from "./SectionContext";
 
 const TestType1 = function ({ isLocked, data, handleChange }) {
   if (isLocked) {
@@ -45,7 +46,8 @@ const TestType2 = function ({ isLocked, data, handleChange }) {
   }
 };
 
-const FormDisplay = function ({ leafType, isLocked }) {
+const FormDisplay = function ({ isLocked }) {
+  const leafType = useContext(SectionContext);
   const [data, setData] = useState("");
   // at some point, this will be an object, and each
   // field will get a version of handleChange that directs

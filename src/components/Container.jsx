@@ -1,8 +1,12 @@
-const Container = function ({ heading, className, children }) {
+import { SectionContext } from "./SectionContext";
+
+const Container = function ({ heading, leafType, className, children }) {
   return (
     <div className="container">
       <h2>{heading}</h2>
-      <div className={className}>{children}</div>
+      <div className={className}>
+        <SectionContext value={leafType}>{children}</SectionContext>
+      </div>
     </div>
   );
 };

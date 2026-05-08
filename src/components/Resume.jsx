@@ -4,23 +4,16 @@ import FormDisplay from "./FormDisplay";
 import Lockable from "./Lockable.jsx";
 
 const Resume = function () {
-  const renderLeaf = (leafType, isLocked) => (
-    <FormDisplay leafType={leafType} isLocked={isLocked} />
-  );
+  const renderFormDisplay = (isLocked) => <FormDisplay isLocked={isLocked} />;
   return (
     <>
-      <Container className="red" heading="Type 1 Section">
-        <Lockable leafType="1" renderItem={renderLeaf} />
+      <Container className="red" leafType="1" heading="Type 1 Section">
+        <Lockable renderItem={renderFormDisplay} />
       </Container>
-      <Container className="blue" heading="Type 2 Section">
+      <Container className="blue" leafType="2" heading="Type 2 Section">
         <Lockable
-          leafType="2"
-          renderItem={(leafType, isLocked) => (
-            <Expandable
-              leafType={leafType}
-              isLocked={isLocked}
-              renderItem={renderLeaf}
-            />
+          renderItem={(isLocked) => (
+            <Expandable isLocked={isLocked} renderItem={renderFormDisplay} />
           )}
         />
       </Container>
