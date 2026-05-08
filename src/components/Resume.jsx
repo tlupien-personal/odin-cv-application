@@ -7,10 +7,42 @@ const Resume = function () {
   const renderFormDisplay = (isLocked) => <FormDisplay isLocked={isLocked} />;
   return (
     <>
-      <Container className="red" leafType="1" heading="Type 1 Section">
+      <Container
+        className="contact-info"
+        leafType="contactInfo"
+        heading="Contact Info"
+      >
         <Lockable renderItem={renderFormDisplay} />
       </Container>
-      <Container className="blue" leafType="2" heading="Type 2 Section">
+      <Container className="summary" leafType="summary" heading="Summary">
+        <Lockable renderItem={renderFormDisplay} />
+      </Container>
+      <Container className="portfolio" leafType="portfolio" heading="Portfolio">
+        <Lockable
+          renderItem={(isLocked) => (
+            <Expandable isLocked={isLocked} renderItem={renderFormDisplay} />
+          )}
+        />
+      </Container>
+      <Container
+        className="work-experience"
+        leafType="workExperience"
+        heading="Work Experience"
+      >
+        <Lockable
+          renderItem={(isLocked) => (
+            <Expandable isLocked={isLocked} renderItem={renderFormDisplay} />
+          )}
+        />
+      </Container>
+      <Container className="education" leafType="education" heading="Education">
+        <Lockable
+          renderItem={(isLocked) => (
+            <Expandable isLocked={isLocked} renderItem={renderFormDisplay} />
+          )}
+        />
+      </Container>
+      <Container className="skill" leafType="skills" heading="Skills">
         <Lockable
           renderItem={(isLocked) => (
             <Expandable isLocked={isLocked} renderItem={renderFormDisplay} />
