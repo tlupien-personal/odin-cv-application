@@ -1,3 +1,15 @@
-h1 {
-  color: red;
+.red {
+  background-color: rgba(255 0 0 / 30%);
+}
+.blue {
+  background-color: rgba(0 0 255 / 30%);
+}
+/* Move Me! */
+button {
+  background-color: transparent;
+  border: none;
+}
+svg {
+  width: 25px;
+  height: 25px;
 }
