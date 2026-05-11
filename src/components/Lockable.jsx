@@ -9,7 +9,7 @@ const Lockable = function ({ renderItem }) {
     <div className="lockable">
       {renderItem(isLocked)}
       <IconButton
-        className="lockable"
+        className="lockable-btn"
         iconName={isLocked ? "unlock" : "lock"}
         handleClick={(e) => {
           e.preventDefault();

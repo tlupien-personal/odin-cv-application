@@ -1,0 +1,11 @@
+div.expandable {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+div.expandable-row {
+  display: grid;
+  grid-template-columns: 1fr 25px;
+  gap: 10px;
+}

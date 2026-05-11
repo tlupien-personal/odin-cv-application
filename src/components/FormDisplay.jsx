@@ -3,6 +3,7 @@ import { SectionContext } from "./SectionContext";
 import "../styles/formDisplay.css";
 import ContactInfoDisplayForm from "./specifics/ContactInfoDisplayForm";
 import SummaryDisplayForm from "./specifics/SummaryDisplayForm";
+import PortfolioDisplayForm from "./specifics/PortfolioDisplayForm";
 
 const FormDisplay = function ({ isLocked }) {
   const leafType = useContext(SectionContext);
@@ -24,6 +25,14 @@ const FormDisplay = function ({ isLocked }) {
     case "summary":
       return (
         <SummaryDisplayForm
+          isLocked={isLocked}
+          data={data}
+          handleChange={handleChange}
+        />
+      );
+    case "portfolio":
+      return (
+        <PortfolioDisplayForm
           isLocked={isLocked}
           data={data}
           handleChange={handleChange}

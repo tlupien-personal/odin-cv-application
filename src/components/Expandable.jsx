@@ -1,5 +1,6 @@
 import { useState } from "react";
 import IconButton from "./IconButton";
+import "../styles/expandable.css";
 
 const Expandable = function ({ isLocked, renderItem }) {
   const [items, setItems] = useState([crypto.randomUUID()]);
@@ -9,19 +10,26 @@ const Expandable = function ({ isLocked, renderItem }) {
   };
 
   return (
-    <div>
+    <div className="expandable">
       {items.map((item) => (
-        <div key={item}>
+        <div className="expandable-row" key={item}>
           {renderItem(isLocked)}
           {!isLocked && (
             <IconButton
+              className="delete-btn"
               iconName="delete"
               handleClick={() => setItems(items.filter((i) => i !== item))}
             />
           )}
         </div>
       ))}
-      {!isLocked && <IconButton iconName="add" handleClick={() => addItem()} />}
+      {!isLocked && (
+        <IconButton
+          className="add-btn"
+          iconName="add"
+          handleClick={() => addItem()}
+        />
+      )}
     </div>
   );
 };

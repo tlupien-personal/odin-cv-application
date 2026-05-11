@@ -1,9 +1,10 @@
 button {
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
-button.lockable {
+.lockable-btn {
   position: absolute;
   top: 0;
   right: 0;
