@@ -1,3 +1,5 @@
+import AreaHelper from "./AreaHelper";
+
 const SummaryDisplayForm = function ({ isLocked, data, handleChange }) {
   if (isLocked) {
     return (
@@ -8,17 +10,14 @@ const SummaryDisplayForm = function ({ isLocked, data, handleChange }) {
   } else {
     return (
       <form className="exempt">
-        <div>
-          <label htmlFor="summary">Summary</label>
-          <textarea
-            id="summary"
-            name="summary"
-            rows="5"
-            cols="60"
-            onChange={handleChange}
-            value={data.summary}
-          ></textarea>
-        </div>
+        <AreaHelper
+          id="summary"
+          rows="5"
+          labelText="Summary"
+          hidden={true}
+          data={data}
+          handleChange={handleChange}
+        />
       </form>
     );
   }

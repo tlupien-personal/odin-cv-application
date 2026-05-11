@@ -12,15 +12,17 @@ const PortfolioDisplayForm = function ({ isLocked, data, handleChange }) {
     );
   } else {
     return (
-      <FormHelper
-        fields={[
-          { id: "text", labelText: "Name", type: "text" },
-          { id: "link", labelText: "Link", type: "url" },
-          { id: "description", labelText: "Description", type: "text" },
-        ]}
-        data={data}
-        handleChange={handleChange}
-      />
+      <form>
+        <FormHelper
+          fields={[
+            { id: "text", labelText: "Name", type: "text" },
+            { id: "link", labelText: "Link", type: "url" },
+            { id: "description", labelText: "Description", type: "text" },
+          ]}
+          data={data}
+          handleChange={handleChange}
+        />
+      </form>
     );
   }
 };

@@ -22,7 +22,7 @@ const WorkExperienceDisplayForm = function ({ isLocked, data, handleChange }) {
     );
   } else {
     top = (
-      <>
+      <form>
         <FormHelper
           fields={[
             { id: "title", labelText: "Title", type: "text" },
@@ -33,7 +33,7 @@ const WorkExperienceDisplayForm = function ({ isLocked, data, handleChange }) {
           data={data}
           handleChange={handleChange}
         />
-      </>
+      </form>
     );
   }
 

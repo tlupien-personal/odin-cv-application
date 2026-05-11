@@ -15,7 +15,7 @@ const Row = function ({ type, id, labelText, data, handleChange }) {
 
 const FormHelper = function ({ fields, data, handleChange }) {
   return (
-    <form>
+    <>
       {fields.map((field) => {
         return (
           <Row
@@ -28,7 +28,7 @@ const FormHelper = function ({ fields, data, handleChange }) {
           />
         );
       })}
-    </form>
+    </>
   );
 };
 
