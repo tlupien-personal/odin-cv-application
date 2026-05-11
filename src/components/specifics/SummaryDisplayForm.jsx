@@ -9,7 +9,7 @@ const SummaryDisplayForm = function ({ isLocked, data, handleChange }) {
     return (
       <form className="exempt">
         <div>
-          <label htmlFor="summary">Summary: </label>
+          <label htmlFor="summary">Summary</label>
           <textarea
             id="summary"
             name="summary"

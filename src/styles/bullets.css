@@ -1,0 +1,15 @@
+.bullets {
+  padding: 10px;
+}
+
+.bullets ul {
+  padding-left: 0;
+}
+
+.bullets h4 {
+  line-height: 2;
+}
+
+.bullets .add-btn {
+  align-self: flex-end;
+}

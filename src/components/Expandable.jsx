@@ -10,10 +10,10 @@ const Expandable = function ({ isLocked, renderItem }) {
   };
 
   return (
-    <div className="expandable">
+    <ul className="expandable">
       {items.map((item) => (
-        <div className="expandable-row" key={item}>
-          {renderItem(isLocked)}
+        <li className="expandable-row" key={item}>
+          {renderItem(isLocked, item)}
           {!isLocked && (
             <IconButton
               className="delete-btn"
@@ -21,7 +21,7 @@ const Expandable = function ({ isLocked, renderItem }) {
               handleClick={() => setItems(items.filter((i) => i !== item))}
             />
           )}
-        </div>
+        </li>
       ))}
       {!isLocked && (
         <IconButton
@@ -30,7 +30,7 @@ const Expandable = function ({ isLocked, renderItem }) {
           handleClick={() => addItem()}
         />
       )}
-    </div>
+    </ul>
   );
 };
 

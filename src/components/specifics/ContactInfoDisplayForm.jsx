@@ -16,12 +16,12 @@ const ContactInfoDisplayForm = function ({ isLocked, data, handleChange }) {
     return (
       <FormHelper
         fields={[
-          { id: "firstName", labelText: "First Name: ", type: "text" },
-          { id: "lastName", labelText: "Last Name: ", type: "text" },
-          { id: "email", labelText: "Email: ", type: "email" },
-          { id: "phone", labelText: "Phone: ", type: "tel" },
-          { id: "city", labelText: "City: ", type: "text" },
-          { id: "state", labelText: "State: ", type: "text" },
+          { id: "firstName", labelText: "First Name", type: "text" },
+          { id: "lastName", labelText: "Last Name", type: "text" },
+          { id: "email", labelText: "Email", type: "email" },
+          { id: "phone", labelText: "Phone", type: "tel" },
+          { id: "city", labelText: "City", type: "text" },
+          { id: "state", labelText: "State", type: "text" },
         ]}
         data={data}
         handleChange={handleChange}
