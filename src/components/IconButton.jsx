@@ -27,8 +27,12 @@ const ICONS = {
   ),
 };
 
-const IconButton = function ({ iconName, handleClick }) {
-  return <button onClick={handleClick}>{ICONS[iconName]}</button>;
+const IconButton = function ({ iconName, handleClick, className }) {
+  return (
+    <button className={className} onClick={handleClick}>
+      {ICONS[iconName]}
+    </button>
+  );
 };
 
 export default IconButton;

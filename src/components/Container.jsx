@@ -1,4 +1,5 @@
 import { SectionContext } from "./SectionContext";
+import "../styles/container.css";
 
 const Container = function ({ heading, leafType, className, children }) {
   return (

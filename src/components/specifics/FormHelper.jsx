@@ -1,6 +1,6 @@
 const Row = function ({ type, id, labelText, data, handleChange }) {
   return (
-    <div>
+    <>
       <label htmlFor={id}>{labelText}</label>
       <input
         type={type}
@@ -9,7 +9,7 @@ const Row = function ({ type, id, labelText, data, handleChange }) {
         value={data[id] || ""}
         onChange={handleChange}
       ></input>
-    </div>
+    </>
   );
 };
 
@@ -19,6 +19,7 @@ const FormHelper = function ({ fields, data, handleChange }) {
       {fields.map((field) => {
         return (
           <Row
+            key={field.id}
             type={field.type}
             id={field.id}
             labelText={field.labelText}

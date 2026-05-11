@@ -7,18 +7,19 @@ const SummaryDisplayForm = function ({ isLocked, data, handleChange }) {
     );
   } else {
     return (
-      <div>
-        <label for="summary">Summary: </label>
-        <textarea
-          id="summary"
-          name="summary"
-          rows="5"
-          cols="60"
-          onChange={handleChange}
-        >
-          {data.summary}
-        </textarea>
-      </div>
+      <form className="exempt">
+        <div>
+          <label htmlFor="summary">Summary: </label>
+          <textarea
+            id="summary"
+            name="summary"
+            rows="5"
+            cols="60"
+            onChange={handleChange}
+            value={data.summary}
+          ></textarea>
+        </div>
+      </form>
     );
   }
 };

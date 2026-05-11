@@ -1,0 +1,7 @@
+div.lockable {
+  position: relative;
+}
+
+div.lockable > :not(button) {
+  padding: 10px;
+}

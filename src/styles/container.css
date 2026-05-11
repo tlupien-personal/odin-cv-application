@@ -1,0 +1,13 @@
+div.container {
+  max-width: 500px;
+  margin: 2vh auto;
+  padding: 10px;
+}
+
+div.container > div {
+  padding: 25px 0;
+}
+
+div.container * {
+  max-width: 100%;
+}

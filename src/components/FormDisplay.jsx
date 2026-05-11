@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { SectionContext } from "./SectionContext";
+import "../styles/formDisplay.css";
 import ContactInfoDisplayForm from "./specifics/ContactInfoDisplayForm";
 import SummaryDisplayForm from "./specifics/SummaryDisplayForm";
 
