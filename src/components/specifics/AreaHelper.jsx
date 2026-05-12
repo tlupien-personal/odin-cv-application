@@ -1,15 +1,26 @@
-import "../../styles/areaHelper.css"
+import "../../styles/areaHelper.css";
 
-const AreaHelper = function ({ id, rows, labelText, hidden, data, handleChange }) {
+const AreaHelper = function ({
+  id,
+  rows,
+  labelText,
+  hidden,
+  data,
+  handleChange,
+  autoFocus,
+}) {
   return (
     <div>
-      <label htmlFor="summary" className={hidden && "sr-only"}>{labelText}</label>
+      <label htmlFor="summary" className={hidden && "sr-only"}>
+        {labelText}
+      </label>
       <textarea
         id={id}
         name={id}
         rows={rows}
         onChange={handleChange}
         value={data[id]}
+        autoFocus={autoFocus}
       ></textarea>
     </div>
   );

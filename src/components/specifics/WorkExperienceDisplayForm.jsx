@@ -3,7 +3,7 @@ import Bullets from "./Bullets";
 import "../../styles/workExperienceDisplayForm.css";
 
 const formatDate = function (date) {
-  return new Date(date).toLocaleString("en-US", {
+  return new Date(date + "T00:00").toLocaleString("en-US", {
     month: "short",
     year: "numeric",
   });

@@ -3,7 +3,7 @@ import IconButton from "./IconButton";
 import "../styles/expandable.css";
 
 const Expandable = function ({ isLocked, renderItem }) {
-  const [items, setItems] = useState([crypto.randomUUID()]);
+  const [items, setItems] = useState([]);
 
   const addItem = function () {
     setItems([...items, crypto.randomUUID()]);

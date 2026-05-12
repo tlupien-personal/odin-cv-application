@@ -1,4 +1,4 @@
-const Row = function ({ type, id, labelText, data, handleChange }) {
+const Row = function ({ type, id, labelText, data, handleChange, idx }) {
   return (
     <>
       <label htmlFor={id}>{labelText}</label>
@@ -8,6 +8,8 @@ const Row = function ({ type, id, labelText, data, handleChange }) {
         id={id}
         value={data[id] || ""}
         onChange={handleChange}
+        // to go to first field on keyboard use of add button
+        autoFocus={idx === 0}
       ></input>
     </>
   );
@@ -16,7 +18,7 @@ const Row = function ({ type, id, labelText, data, handleChange }) {
 const FormHelper = function ({ fields, data, handleChange }) {
   return (
     <>
-      {fields.map((field) => {
+      {fields.map((field, idx) => {
         return (
           <Row
             key={field.id}
@@ -25,6 +27,7 @@ const FormHelper = function ({ fields, data, handleChange }) {
             labelText={field.labelText}
             data={data}
             handleChange={handleChange}
+            idx={idx}
           />
         );
       })}

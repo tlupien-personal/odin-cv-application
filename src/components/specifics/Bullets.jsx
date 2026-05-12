@@ -16,6 +16,7 @@ const Bullet = function ({ isLocked, data, handleChange, uuid }) {
           hidden={true}
           data={data}
           handleChange={handleChange}
+          autoFocus={true}
         />
       </form>
     );

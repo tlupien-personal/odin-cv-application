@@ -15,7 +15,7 @@ import Bullets from "./Bullets";
 import "../../styles/educationDisplayForm.css";
 
 const formatDate = function (date) {
-  return new Date(date).toLocaleString("en-US", {
+  return new Date(date + "T00:00").toLocaleString("en-US", {
     month: "short",
     year: "numeric",
   });
@@ -45,7 +45,7 @@ const EducationDisplayForm = function ({ isLocked, data, handleChange }) {
             { id: "university", labelText: "University", type: "text" },
             { id: "startDate", labelText: "Start Date", type: "date" },
             { id: "endDate", labelText: "End Date", type: "date" },
-            { id: "major", labelText: "Major", type: "text" },
+            { id: "degree", labelText: "Degree", type: "text" },
           ]}
           data={data}
           handleChange={handleChange}
