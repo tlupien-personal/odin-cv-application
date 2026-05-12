@@ -1,11 +1,11 @@
-div.container {
+.container {
   max-width: 600px;
   margin: 0 auto;
   padding: 10px;
 }
 
-div.container > div {
-  padding: 25px 0;
+.section {
+  padding-top: 25px;
 }
 
 div.container * {

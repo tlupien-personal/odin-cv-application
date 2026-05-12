@@ -34,7 +34,7 @@ const EducationDisplayForm = function ({ isLocked, data, handleChange }) {
               : null}
           </p>
         </div>
-        <p>{data.major}</p>
+        <p>{data.degree}</p>
       </>
     );
   } else {

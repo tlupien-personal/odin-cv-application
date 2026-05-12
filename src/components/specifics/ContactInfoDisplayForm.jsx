@@ -4,9 +4,9 @@ const ContactInfoDisplayForm = function ({ isLocked, data, handleChange }) {
   if (isLocked) {
     return (
       <div>
-        <p>
+        <h1>
           {data.firstName} {data.lastName}
-        </p>
+        </h1>
         <p>{data.email}</p>
         <p>{data.phone}</p>
         <p>{data.city && data.state ? `${data.city}, ${data.state}` : null}</p>

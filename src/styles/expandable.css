@@ -1,7 +1,14 @@
 .expandable {
   display: flex;
   flex-direction: column;
+}
+
+.expandable.unlocked {
   gap: 25px;
+}
+
+.expandable.locked {
+  gap: 10px;
 }
 
 .expandable-row.unlocked {

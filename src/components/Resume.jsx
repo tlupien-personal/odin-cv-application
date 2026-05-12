@@ -2,11 +2,32 @@ import Container from "./Container";
 import Expandable from "./Expandable.jsx";
 import FormDisplay from "./FormDisplay";
 import Lockable from "./Lockable.jsx";
+import { PrintContext } from "./PrintContext.js";
+import { useState, useEffect } from "react";
+import "../styles/print.css";
+import Blurb from "./Blurb.jsx";
 
 const Resume = function () {
   const renderFormDisplay = (isLocked) => <FormDisplay isLocked={isLocked} />;
+
+  const [printOverride, setPrintOverride] = useState(false);
+
+  useEffect(() => {
+    const onBefore = () => setPrintOverride(true);
+    const onAfter = () => setPrintOverride(false);
+
+    window.addEventListener("beforeprint", onBefore);
+    window.addEventListener("afterprint", onAfter);
+
+    return () => {
+      window.removeEventListener("beforeprint", onBefore);
+      window.removeEventListener("afterprint", onAfter);
+    };
+  }, []);
+
   return (
-    <>
+    <PrintContext value={printOverride}>
+      <Blurb />
       <Container
         className="contact-info"
         leafType="contactInfo"
@@ -49,7 +70,7 @@ const Resume = function () {
           )}
         />
       </Container>
-    </>
+    </PrintContext>
   );
 };
 

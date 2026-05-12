@@ -3,9 +3,9 @@ import "../styles/container.css";
 
 const Container = function ({ heading, leafType, className, children }) {
   return (
-    <div className="container">
+    <div className={`container ${className}`}>
       <h2>{heading}</h2>
-      <div className={className}>
+      <div className={`section ${className}`}>
         <SectionContext value={leafType}>{children}</SectionContext>
       </div>
     </div>
