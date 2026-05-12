@@ -5,7 +5,7 @@ form:not(.exempt) {
   gap: 10px 25px;
 }
 
-@media (width < 500px) {
+@media (width < 450px) {
   form:not(.exempt) {
     display: flex;
     flex-direction: column;

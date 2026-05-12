@@ -3,13 +3,18 @@
 }
 
 .bullets ul {
-  padding-left: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.bullets ul.locked {
+  padding-left: 25px;
+}
+
+.bullets li.locked {
+  list-style-type: disc;
 }
 
 .bullets h4 {
   line-height: 2;
-}
-
-.bullets .add-btn {
-  align-self: flex-end;
 }

@@ -1,9 +1,12 @@
 import FormHelper from "./FormHelper";
 import Bullets from "./Bullets";
+import "../../styles/workExperienceDisplayForm.css";
 
 const formatDate = function (date) {
-  // TODO: implement this
-  return date;
+  return new Date(date).toLocaleString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
 };
 
 const WorkExperienceDisplayForm = function ({ isLocked, data, handleChange }) {
@@ -11,12 +14,14 @@ const WorkExperienceDisplayForm = function ({ isLocked, data, handleChange }) {
   if (isLocked) {
     top = (
       <>
-        <h3>{data.title}</h3>
-        <p>
-          {data.startDate && data.endDate
-            ? `${formatDate(data.startDate)}-${formatDate(data.endDate)}`
-            : null}
-        </p>
+        <div className="subitem-header">
+          <h3>{data.title}</h3>
+          <p>
+            {data.startDate && data.endDate
+              ? `${formatDate(data.startDate)} - ${formatDate(data.endDate)}`
+              : null}
+          </p>
+        </div>
         <p>{data.company}</p>
       </>
     );
@@ -38,7 +43,7 @@ const WorkExperienceDisplayForm = function ({ isLocked, data, handleChange }) {
   }
 
   return (
-    <div>
+    <div className="work-experience-item">
       {top}
       <Bullets isLocked={isLocked} />
     </div>

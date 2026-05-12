@@ -5,7 +5,7 @@ import "../../styles/bullets.css";
 
 const Bullet = function ({ isLocked, data, handleChange, uuid }) {
   if (isLocked) {
-    return <p>{data[uuid]}</p>;
+    return <>{data[uuid]}</>;
   } else {
     return (
       <form className="exempt">

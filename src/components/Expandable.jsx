@@ -10,9 +10,12 @@ const Expandable = function ({ isLocked, renderItem }) {
   };
 
   return (
-    <ul className="expandable">
+    <ul className={`expandable ${isLocked ? "locked" : "unlocked"}`}>
       {items.map((item) => (
-        <li className="expandable-row" key={item}>
+        <li
+          className={`expandable-row ${isLocked ? "locked" : "unlocked"}`}
+          key={item}
+        >
           {renderItem(isLocked, item)}
           {!isLocked && (
             <IconButton

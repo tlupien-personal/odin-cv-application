@@ -2,13 +2,11 @@ button {
   background-color: transparent;
   border: none;
   padding: 0;
-}
-
-.lockable-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateY(-100%);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 svg {
