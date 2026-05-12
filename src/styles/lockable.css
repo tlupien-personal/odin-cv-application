@@ -1,0 +1,14 @@
+div.lockable {
+  position: relative;
+}
+
+div.lockable > :not(button) {
+  padding: 10px;
+}
+
+.lockable-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+}

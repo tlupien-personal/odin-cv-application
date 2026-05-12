@@ -1,0 +1,25 @@
+@media print {
+  button {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+  }
+
+  .section {
+    padding-top: 0 !important;
+  }
+
+  .container.contact-info > h2 {
+    display: none !important;
+  }
+
+  .blurb {
+    display: none !important;
+  }
+
+  .expandable-row {
+    break-inside: avoid !important;
+  }
+}
