@@ -42,7 +42,7 @@ const Resume = function () {
           )}
         />
       </Container>
-      <Container className="skill" leafType="skills" heading="Skills">
+      <Container className="skills" leafType="skills" heading="Skills">
         <Lockable
           renderItem={(isLocked) => (
             <Expandable isLocked={isLocked} renderItem={renderFormDisplay} />

@@ -5,6 +5,8 @@ import ContactInfoDisplayForm from "./specifics/ContactInfoDisplayForm";
 import SummaryDisplayForm from "./specifics/SummaryDisplayForm";
 import PortfolioDisplayForm from "./specifics/PortfolioDisplayForm";
 import WorkExperienceDisplayForm from "./specifics/WorkExperienceDisplayForm";
+import EducationDisplayForm from "./specifics/EducationDisplayForm";
+import SkillDisplayForm from "./specifics/SkillDisplayForm";
 
 const FormDisplay = function ({ isLocked }) {
   const leafType = useContext(SectionContext);
@@ -42,6 +44,22 @@ const FormDisplay = function ({ isLocked }) {
     case "workExperience":
       return (
         <WorkExperienceDisplayForm
+          isLocked={isLocked}
+          data={data}
+          handleChange={handleChange}
+        />
+      );
+    case "education":
+      return (
+        <EducationDisplayForm
+          isLocked={isLocked}
+          data={data}
+          handleChange={handleChange}
+        />
+      );
+    case "skills":
+      return (
+        <SkillDisplayForm
           isLocked={isLocked}
           data={data}
           handleChange={handleChange}
